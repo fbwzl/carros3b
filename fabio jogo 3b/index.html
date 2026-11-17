@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Turbo Escape - Jogo de Carro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- HUD de Pontuação -->
+        <div id="hud" class="hidden">
+            <div>Pontos: <span id="score">0</span></div>
+            <div>Velocidade: <span id="speed">5</span></div>
+        </div>
+
+        <!-- Tela Inicial -->
+        <div id="menu-screen" class="screen">
+            <h1>TURBO ESCAPE</h1>
+            <p>Desvie dos carros inimigos na estrada!</p>
+            <p style="font-size: 0.9rem; color: #888;">PC: Setas / A-D<br>Mobile: Botões na tela ou toque</p>
+            <button class="btn" id="start-btn">JOGAR</button>
+        </div>
+
+        <!-- Tela de Fim de Jogo -->
+        <div id="gameover-screen" class="screen hidden">
+            <h1>FIM DE JOGO</h1>
+            <p>Você bateu!<br>Pontuação final: <span id="final-score">0</span></p>
+            <button class="btn" id="restart-btn">JOGAR NOVAMENTE</button>
+        </div>
+
+        <!-- Canvas do Jogo -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Botões Mobile -->
+        <div class="controls" id="mobile-controls">
+            <div class="ctrl-btn" id="left-btn">◀</div>
+            <div class="ctrl-btn" id="right-btn">▶</div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
